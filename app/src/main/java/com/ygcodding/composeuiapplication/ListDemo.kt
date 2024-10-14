@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ListDemo() {
-    LazyColumnDemo()
+    ScaffoldExample()
 }
 
 @Composable
@@ -43,15 +43,6 @@ fun LazyColumnDemo() {
     val myList = getMarvelChar()
 
     LazyColumn {
-//        items(
-//            count = 50,
-//            itemContent = {
-//                BuildItem(value = "item $it")
-//            }
-//        )
-//        itemsIndexed(alphabets, itemContent = {index, item ->
-//            BuildItem("item $item index $index")
-//        })
         itemsIndexed(myList, itemContent = { index, item ->
             MarvelItem(item)
         })
