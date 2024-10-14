@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -73,6 +74,7 @@ fun MarvelItem(data: MarvelChar) {
     ) {
         Image(
             painter = painterResource(data.imageRes), contentDescription = data.name,
+            contentScale = ContentScale.Crop,
             modifier = Modifier
                 .clip(CircleShape)
                 .size(64.dp)
